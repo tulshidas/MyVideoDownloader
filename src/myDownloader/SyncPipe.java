@@ -15,6 +15,10 @@ public SyncPipe(InputStream istrm, OutputStream ostrm) {
           for (int length = 0; (length = istrm_.read(buffer)) != -1; )
           {
               ostrm_.write(buffer, 0, length);
+              String s = new String(buffer);
+              if(s.split("\\s+").length >2 && s.indexOf(" at ")!=-1){
+            	  System.out.println("me:"+s.split("\\s+")[2]);
+              }
           }
       }
       catch (Exception e)
