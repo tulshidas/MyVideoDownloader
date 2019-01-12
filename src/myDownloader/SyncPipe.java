@@ -19,6 +19,7 @@ public SyncPipe(InputStream istrm, OutputStream ostrm) {
               if(s.split("\\s+").length >2 && s.indexOf(" at ")!=-1){
             	  System.out.println("me:"+s.split("\\s+")[2]);
               }
+              //its ok
           }
       }
       catch (Exception e)
